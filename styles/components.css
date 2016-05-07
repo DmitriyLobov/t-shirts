@@ -1,0 +1,30 @@
+.color-palette-btn{
+	background: url('../img/comp-icons/color-pallete-icon.png') center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.left-icon-cont{
+	width: 40px;
+	height: 40px;
+}
+.color-palette{
+	position: relative;
+}
+.palette-cont{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 45px;
+}
+.palette-cont tbody{
+	vertical-align:middle;
+}
+.jPicker .Cancel{
+	cursor: pointer;
+}
+.pallete-close{
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="js/vendor/jpicker/css/jPicker-1.1.6.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="color-palette">
+	<p>Color Pallete</p>
+	<p class="comp-class-name">class="color-palette-btn left-icon-cont"</p>
+	<button type="onclick" class="color-palette-btn left-icon-cont">
+		
+	</button>
+	<div class="palette-cont">
+		
+	</div>
+	<button class="pallete-close">
+X
+		</button>
+</div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/vendor/jpicker/jpicker-1.1.6.min.js"></script>
+<script>
+$(document).ready(function () {
+	$('.color-palette-btn').click(function () {
+		$('.palette-cont').jPicker();
+		
+	});
+	$('.pallete-close').click(function() {
+			$('.jPicker').hide();
+		});
+
+
+
+
+})
+
+</script>
+</body>
+</html>

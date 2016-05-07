@@ -1,0 +1,9 @@
+@import url('reset.css');
+@import url('components.css');
+
+
+button{
+	cursor: pointer;
+	outline:none;
+	border:none;
+}
