@@ -1,1 +1,85 @@
+.main-cont{
+	overflow:hidden !important;
+	width:100%;
+	min-height: 100vh;
+	height:100vh;
+	background-color:#efefef;
+}
 
+.btn{
+	width:100%;
+	padding:10px 5px;
+	background-color:yellow;
+	outline: none;
+	border:none;
+	cursor: pointer;
+	font-size:16px;
+	line-height: 20px;
+	border-radius:5px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.btn:hover{
+	background-color:white;
+}
+
+.btn:active{
+	background-color:blue;
+}
+
+.plus{
+	color:green;
+	font-size:40px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 45px;
+	width:100%;
+	display: inline-block;
+	cursor:pointer;
+}
+
+.op-icon{
+	height:40px;
+	background-color:yellow;
+	margin:5px;
+	text-align: center;
+	cursor:pointer;
+}
+
+.text-field{
+	width:100%;
+	border:none;
+	outline: none;
+	line-height: 24px;
+	font-size:18px;
+	padding:2.5px 5px;
+	box-sizing: border-box;
+	margin:2.5px 0;
+	background-color:transparent;
+	border:1px solid gray;
+	border-radius: 5px;
+}
+
+.text-field:focus {
+	background-color:#fff;
+	border-color:yellow;
+}
+
+label{
+	font-size:14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.form-group{
+	width:100%;
+	margin:10px 0;
+}
+
+.shirt-cont{
+	min-height: calc(100vh - 150px);
+	background-color:white;
+	border-radius: 5px;
+}
