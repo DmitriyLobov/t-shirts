@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 	<title>index</title>
-
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href="styles/reset.css" rel="stylesheet">
 	<link href="styles/grid.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row padding">
 			<div class="col-1">
 			<!--left column-->
 				<div class="op-icon">
@@ -102,7 +102,7 @@
 			<div class="col-9">
 			<!--middle column-->
 			<div class="shirt-cont">
-
+				
 			</div>
 			</div>
 			<div class="col-2">
@@ -161,6 +161,27 @@ function GridLines(cont_class){
 						$(x_val).append(val);
 					}
 					pastVal(curr);
+					function createSmallLinesCont(lines_count){
+						var i = 0;
+						var small_lines_cont = $('<div></div>');
+						small_lines_cont.addClass('small-lines-cont');
+						x_col_cont.append(small_lines_cont);
+						function createSmallLines(){
+						var small_lines = $('<div></div>');
+						small_lines.addClass('small-lines');
+						small_lines_cont.append(small_lines);
+					}
+					while(i<lines_count){
+						createSmallLines();
+						i=i+10;
+					}
+				}
+createSmallLinesCont(100);
+
+
+
+
+
 				}
 				createValCont();
 			}
@@ -169,6 +190,7 @@ function GridLines(cont_class){
 					createCol();
 					curr=curr+100;
 				}
+			
 
 		}
 
@@ -181,17 +203,36 @@ pasteXLines(cont);
 }
 
 
+function CoordLines(parent_name){
+	this.parent_name = parent_name;
+	var parent = $('.'+ parent_name);
+	var x_line_coord = $('<div></div>');
+	var y_line_coord = $('<div></div>');
+	x_line_coord.addClass('x-line-coord');
+	y_line_coord.addClass('y-line-coord');
+	parent.append(x_line_coord);
+	parent.append(y_line_coord);
 
+	this.moveCoordLines = function(x, y) {
 
+			x_line_coord.css('left', x);
+			y_line_coord.css('top' , y);
+		}
+		
 
-
-
-
-
+}
 
 
 	$(document).ready(function() {
+		
 		var input_grid_lines = $('input#grid-lines');
+		var grid_lines = new GridLines('shirt-cont');
+		var grid_lines_left = new GridLines('shirt-cont');
+		var coord_lines = new CoordLines('shirt-cont');
+		$('.x-lines-cont, .x-line-coord, .y-line-coord').hide();
+
+		
+		
 		var flag_grid = false;
 
 		$('input#ruler-lines').click(function () {
@@ -199,15 +240,25 @@ pasteXLines(cont);
 		});
 
 		input_grid_lines.click(function() {
+
 			flag_grid = !flag_grid;
 			if (flag_grid) {
-				var grid_lines = new GridLines('shirt-cont');
+				$('.x-lines-cont, .x-line-coord, .y-line-coord').show();
 			} 
 			else {
-				$('.x-lines-cont').hide();
+				$('.x-lines-cont, .x-line-coord, .y-line-coord').hide();
 			}
 
 		});
+	$('.shirt-cont').mousemove(function (e) {
+			var offset = $(this).offset();
+			var x_coord = (e.pageX - offset.left);
+ 			var y_coord = (e.pageY - offset.top);
+ 			coord_lines.moveCoordLines(x_coord, y_coord);
+
+
+		});
+
 	})
 </script>
 </body>

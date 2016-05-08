@@ -1,8 +1,13 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+
 .main-cont{
-	overflow:hidden !important;
+	overflow:hidden;
 	width:100%;
-	min-height: 100vh;
-	height:100vh;
+	max-width:100%;
+	height: 800px;
 	background-color:#efefef;
 }
 
@@ -79,13 +84,14 @@ label{
 }
 
 .shirt-cont{
-	min-height: calc(100vh - 150px);
+	height: 600px;
 	background-color:white;
 	border-radius: 5px;
 	position: relative;
 }
 .view-menu-cont label{
 	font-size:10px;
+	color:#666;
 }
 .view-menu-cont label::after{
 	content:'';
@@ -116,24 +122,85 @@ label{
 	width: 100px;
 	display: block;
 	float: left;
-	border: 1px solid black;
-	border-left:none;
-	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:border-box ;
-	box-sizing: border-box;
+	position: relative;
 }
 p.x-val{
 	text-align:left;
+	margin:0 0 12px 0;
+	font-size: 14px;
+	font-weight: 600;
+	color:#545151;
+}
+.small-lines-cont{
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	display:inline-block;
+}
+
+.small-lines{
+	width: 10px;
+	height: 8px;
+	border-left: 1px solid #666;
+	float:left;
+	display:block;
+}
+.small-lines-cont>.small-lines:nth-of-type(1){
+	height: 14px;
+    margin-top: -3px;
+    border-width: 2px;
+}
+
+.x-col-cont, p.x-val, .small-lines{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:border-box ;
 	box-sizing: border-box;
-	padding-left: 5px;
-	margin: 5px 0;
-	font-size: 14px;
-	font-weight: 600;
 }
-.x-col-cont:nth-of-type(1) {
-	border-left:1px solid black;
+.file-menu-cont{
+	display:none;
+}
+.x-lines-cont:nth-of-type(2){
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+    top: 329px;
+    left: -356px;
+
+}
+
+.x-lines-cont:nth-of-type(2) p{
+	text-align:right ;
+}
+.x-lines-cont:nth-of-type(2)>.x-col-cont{
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.x-lines-cont:nth-of-type(2)>.x-col-cont:nth-of-type(7) p{
+	margin-right: -10px;
+}
+div.padding {
+	padding-top:20px;
+	overflow:hidden;
+}
+.x-line-coord {
+	width:1px;
+	height: 20px;
+	position: absolute;
+	background: red;
+	top: -15px;
+	left: 0;
+}
+.y-line-coord {
+	width: 20px;
+	height: 1px;
+	position: absolute;
+	background: blue;
+	left: -15px;
+	top: 0;
 }
