@@ -28,7 +28,7 @@
 	background-color:blue;
 }
 
-.plus{
+.top-icon{
 	color:green;
 	font-size:40px;
 	text-align: center;
@@ -82,4 +82,58 @@ label{
 	min-height: calc(100vh - 150px);
 	background-color:white;
 	border-radius: 5px;
+	position: relative;
+}
+.view-menu-cont label{
+	font-size:10px;
+}
+.view-menu-cont label::after{
+	content:'';
+	display:block;
+}
+.view-menu-cont input{
+	display:inline-block;
+}
+.view-menu-cont .col-2{
+	width: 100px;
+}
+.shirt-cont{
+	background: white;
+}
+.grid-lines-true{
+	background: url('../img/kletka.jpg') center center repeat;
+	-webkit-background-size: 9%;
+	background-size: 9%;
+} 
+
+.x-lines-cont{
+	display: inline-block;
+	position: absolute;
+	top: -20px;
+	left: 0;
+}
+.x-col-cont{
+	width: 100px;
+	display: block;
+	float: left;
+	border: 1px solid black;
+	border-left:none;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box ;
+	box-sizing: border-box;
+}
+p.x-val{
+	text-align:left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box ;
+	box-sizing: border-box;
+	padding-left: 5px;
+	margin: 5px 0;
+	font-size: 14px;
+	font-weight: 600;
+}
+.x-col-cont:nth-of-type(1) {
+	border-left:1px solid black;
 }
